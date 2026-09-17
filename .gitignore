@@ -1,0 +1,15 @@
+node_modules/
+lib/
+__pycache__/
+*.pyc
+*.pyo
+.npm/
+*.tgz
+.DS_Store
+_pt_work/
+*.egg-info/
+runs/
+runs_alpha/
+
+# S13 只是实验对象，不是框架的一部分，整个排除
+S13_csi500seq_trans/

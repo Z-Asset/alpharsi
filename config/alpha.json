@@ -1,0 +1,23 @@
+{
+  "pkg": "D:/ZR/Loop/S13_csi500seq_trans",
+  "model": {
+    "model": "deepseek-chat",
+    "base_url": "https://api.deepseek.com/v1",
+    "api_key": "",
+    "temperature": 0.0
+  },
+  "settings": {
+    "iterations": 6,
+    "blocks": 2,
+    "max_train": 8000,
+    "fast_epochs": null,
+    "fixed_epochs": 10,
+    "threads": 2,
+    "L": 60,
+    "seed": 42,
+    "patience": 3,
+    "isolated": true,
+    "timeout_s": 800,
+    "out_dir": "runs_alpha"
+  }
+}

@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "alpharsi"
+version = "0.2.0"
+description = "AlphaRSI 三角色自改进闭环：Harness-RSI + Model-RSI（alpha 训练配方自进化）"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Z Asset", email = "x@zasset.cn" }]
+keywords = ["alpharsi", "rsi", "self-improvement", "alpha", "quant", "hyperparameter", "tpe"]
+dependencies = [
+    "numpy>=1.24",
+    "pandas>=2.0",
+    "scipy>=1.10",
+    "pyarrow>=12.0",
+]
+
+[project.optional-dependencies]
+# 神经网络训练（alpha Model-RSI 必需）。torch 用 pip 单独装 CPU/CUDA 版。
+# torch 不写进 dependencies，因为 CPU/CUDA 版安装命令不同，见 README。
+gpu = ["torch>=2.0"]
+
+[project.scripts]
+alpharsi = "alpharsi.cli:main"
+
+[tool.setuptools]
+packages = ["alpharsi"]
+
+[tool.setuptools.package-data]
+alpharsi = ["py.typed"]
